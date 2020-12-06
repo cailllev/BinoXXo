@@ -1,0 +1,33 @@
+#navbar {
+  font-family: Bookman Old Style, serif;
+}
+
+h3 {
+  font-weight: bold;
+  font-family: Bookman Old Style, serif;
+}
+
+html, body {
+  height: 100%;
+  font-family: Bookman Old Style, serif;
+}
+
+#container {
+  margin: 10px;
+  text-align: center;
+}
+
+#levelCanvas {
+  margin: 5px;
+}
+
+#footer {
+  font-family: Bookman Old Style, serif;
+
+  margin-top: 30px;
+  margin-bottom: 0px;
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  bottom: 0px;
+}

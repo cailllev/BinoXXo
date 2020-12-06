@@ -1,0 +1,43 @@
+<description>
+  <div hide={ showLevel }>
+    <form onsubmit= { submit } autocomplete="off">
+        <div class="form-group">
+            <label for="sizeSelect">Size</label>
+            <select ref="sizeRef" class="form-control" id="sizeSelect">
+                <option each={ ix in options } value={ ix } selected={ ix == 8 }>{ix}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="coverageSelect">Coverage</label>
+            <input id="coverageSelect" class="form-control" type="number" step="0.01" min="0" max="1" value="0.6" ref="coverageRef">
+        </div>
+        <button type="button" class="btn btn-dark" onclick={ submit }>Create New Level</button>
+    </form>
+  </div>
+
+  <script>
+    if (showLevel) {
+        initCanvas();
+
+    } else {
+        var tag = this;
+
+        this.options = [];
+        for (let i = 4; i <=16; i += 2) {
+            this.options.push(i);
+        }
+
+        tag.submit = e => {
+            e.preventDefault();
+
+            level = new Level(this.refs.sizeRef.value, this.refs.coverageRef.value);
+            console.log("New Level created, size: " + level.size);
+            localStorage.setItem('savedLevel', JSON.stringify(level));
+            showLevel = true;
+            this.update();
+            initCanvas();
+        }
+    }
+
+  </script>
+</description>

@@ -1,0 +1,19 @@
+{
+  "name": "binoxxo",
+  "version": "1.0.0",
+  "description": "for my sweetheart",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "BinoXXo"
+  ],
+  "author": "Levi Cailleret",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  }
+}
