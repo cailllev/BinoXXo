@@ -7,6 +7,6 @@ Currently deployed with heroku at https://gentle-refuge-74003.herokuapp.com/
 
 ## TODO
 - Add button for hints (which "O"s or "X"s are wrong)
-- Add button to restart round
+- Add button to restart round (``localStorage.clear()``)
 - Write description for own deployement
 - Implement logic so only one solution is possible
